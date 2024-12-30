@@ -1,0 +1,174 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  color: white;
+  padding: 20px 40px; /* Padding kiri dan kanan untuk memberi jarak */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Tetap menggunakan 100% lebar, tetapi dengan padding */
+  box-sizing: border-box; /* Pastikan padding dihitung dalam lebar elemen */
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgb(150, 110, 110);
+}
+
+header .logo img {
+  width: 100px;
+  height: auto;
+}
+
+header .logo h1 {
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; /* Nama font yang akan digunakan */
+  src: url('custom-font.otf') format('opentype'); /* Path ke file .otf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff6f61;
+}
+
+#hero {
+  background: url('mascot.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Membuat background bergerak */
+  color: rgb(0, 0, 0);
+  height: 100vh; /* Membuat hero section mengisi 100% tinggi layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px; /* Menghindari tumpang tindih dengan header */
+  background-position: top center; /* Menjaga latar belakang tetap di tengah */
+  text-shadow: 2px 2px 4px white;
+}
+
+.hero-content {
+  max-width: 80%; /* Membatasi lebar konten agar tidak terlalu lebar */
+}
+
+.hero-heading {
+  font-size: 4rem; /* Membuat teks besar dan tebal */
+  font-weight: 900;
+  margin: 0 0 20px;
+  letter-spacing: 2px;
+  
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 900;
+  
+}
+
+.btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff8c75;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgb(150, 110, 110);
+  
+}
+
+.section:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  #hero {
+    background: url('mascot.jpg') no-repeat center center;
+    background-size: contain; /* Ubah ke "contain" agar gambar tidak terpotong */
+    background-attachment: fixed; /* Membuat latar belakang tetap di tempat saat scroll */
+    color: rgb(0, 0, 0);
+    height: 100vh; /* Membuat hero section mengisi 100% tinggi layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px; /* Menghindari tumpang tindih dengan header */
+    text-shadow: 2px 2px 4px white;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem; /* Menyesuaikan ukuran teks pada perangkat kecil */
+  }
+
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+}
